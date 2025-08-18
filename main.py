@@ -1,5 +1,6 @@
 import requests
 
+
 def main():
     request = requests.get("https://pokeapi.co/api/v2/pokemon")
     if request.status_code == 200:
