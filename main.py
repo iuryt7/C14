@@ -27,7 +27,7 @@ def trigonometria(escolha, angulo):
     elif escolha == '2':
         return np.cos(angulo_rad)
     elif escolha == '3':
-        return np.sin(angulo_rad)
+        return np.tan(angulo_rad)
     else:
         return "Opção inválida!"
 
