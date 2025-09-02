@@ -22,7 +22,7 @@ def test_trigonometria_cosseno():
 
 @pytest.mark.suite1
 def test_trigonometria_tangente():
-    assert trigonometria('3', 45) == np.tan(np.radians(12))
+    assert trigonometria('3', 45) == np.tan(np.radians(45))
 
 @pytest.mark.suite1
 def test_derivada():
