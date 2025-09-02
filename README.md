@@ -1,10 +1,10 @@
 # Projeto Simples em Python
 
-Este é um exemplo básico de aplicação em Python que utiliza a biblioteca **requests** para fazer uma requisição HTTP e exibir o resultado.
+Este é um exemplo básico de aplicação em Python que utiliza as bibliotecas Numpy, Sympy e Pytest para fazer uma calculadora avançada e exibir o resultado.
 
 ## Pré-requisitos
 - Python 3.10 ou superior
-- [Poetry](https://python-poetry.org/docs/) instalado
+- [Poetry](https://python-poetry.org/docs/)
 - Pytest
 
 ---
