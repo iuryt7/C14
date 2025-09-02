@@ -31,7 +31,7 @@ pytest testes.py
 
 ---
 
-### Exercício de testes unitários
+# Exercício de testes unitários
 Dado que o código e seus testes estavam todos passando.
 
 <img width="1057" height="172" alt="{E2F32549-80CB-49F6-8BCF-DF2DB38CC999}" src="https://github.com/user-attachments/assets/84e4fa11-101c-4f71-8a47-045b6af7c728" />
