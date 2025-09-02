@@ -5,6 +5,7 @@ Este é um exemplo básico de aplicação em Python que utiliza a biblioteca **r
 ## Pré-requisitos
 - Python 3.10 ou superior
 - [Poetry](https://python-poetry.org/docs/) instalado
+- Pytest
 
 ---
 
