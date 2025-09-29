@@ -75,14 +75,19 @@ jobs:
           name: build-artifacts
           path: dist/
 
-  notification:
-    runs-on: ubuntu-latest
-    needs: [tests, build]
-    if: always()
+notification:
+  runs-on: ubuntu-latest
+  needs: [tests, build]
+  if: always()
 
-    steps:
-      - name: Enviando a notificação por email
-        run: |
-          echo "Pipeline Executado!" | mail -s "Status da Pipeline" ${{ secrets.NOTIFY_EMAIL }}
-        env:
-          NOTIFY_EMAIL: ${{ secrets.NOTIFY_EMAIL }}
+  steps:
+    - name: Instalando o mailutils
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y mailutils
+
+    - name: Enviando email de notificação
+      run: |
+        echo "Pipeline Executado!" | mail -s "Status da Pipeline" ${{ secrets.NOTIFY_EMAIL }}
+      env:
+        NOTIFY_EMAIL: ${{ secrets.NOTIFY_EMAIL }}
