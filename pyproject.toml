@@ -1,5 +1,5 @@
 [project]
-name = "c14"
+name = "C14"
 version = "0.1.0"
 description = "Projeto de C14 - Engenharia de Software"
 authors = [
@@ -13,6 +13,9 @@ dependencies = [
     "pytest (>=8.4.1,<9.0.0)"
 ]
 
+packages = [
+    { include = "C14" }
+]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
