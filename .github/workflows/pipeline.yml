@@ -32,7 +32,7 @@ jobs:
 
       - name: Rodando os testes
         run: |
-          pytest .\c14\testes.py
+          poetry run pytest .\c14\testes.py
         continue-on-error: true
 
       - name: Upload dos resultados dos testes
