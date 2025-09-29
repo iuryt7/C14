@@ -88,4 +88,6 @@ jobs:
   
       - name: Enviando o email
         run: |
-          echo "Pipeline Executado!" | mail -s "Status da Pipeline" iury.teixeira07@gmail.com
+          echo "Pipeline Executado!" | mail -s "Status da Pipeline" ${{ secrets.NOTIFY_EMAIL }}
+        env:
+          NOTIFY_EMAIL: ${{ secrets.NOTIFY_EMAIL }}
