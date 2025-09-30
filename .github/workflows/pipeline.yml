@@ -32,15 +32,15 @@ jobs:
 
       - name: Rodando os testes
         run: |
-          poetry run pytest ./c14/testes.py
+          poetry run pytest ./c14/testes.py --html=report.html
         continue-on-error: true
 
       - name: Upload dos resultados dos testes
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: test-results
-          path: ./test-results
+          name: test-report
+          path: report.html
 
 
   build:
