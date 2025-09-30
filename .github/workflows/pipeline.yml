@@ -36,11 +36,11 @@ jobs:
         continue-on-error: true
 
       - name: Upload dos resultados dos testes
-        if: failure()
+        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: test-report
-          path: report.html
+          path: ./report.html
 
 
   build:
