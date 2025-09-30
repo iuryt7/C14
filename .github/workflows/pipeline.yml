@@ -32,7 +32,7 @@ jobs:
 
       - name: Rodando os testes
         run: |
-          poetry run pytest ./c14/testes.py --html=report.html
+          poetry run pytest ./c14/testes.py --html=report.html --maxfail=1 --disable-warnings -q  # Gerando o relatório HTML
         continue-on-error: true
 
       - name: Upload dos resultados dos testes
