@@ -19,7 +19,7 @@ jobs:
       - name: Setup python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.9
+          python-version: 3.12
 
       - name: Instalando poetry
         run: |
@@ -32,15 +32,15 @@ jobs:
 
       - name: Rodando os testes
         run: |
-          poetry run pytest ./c14/testes.py
+          poetry run pytest ./c14/testes.py --html=report.html --maxfail=1 --disable-warnings -q  # Gerando o relatório HTML
         continue-on-error: true
 
       - name: Upload dos resultados dos testes
-        if: failure()
+        if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: test-results
-          path: ./test-results
+          name: test-report
+          path: ./report.html
 
 
   build:
@@ -54,7 +54,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.9"
+          python-version: "3.12"
 
       - name: Instalando Poetry
         run: |
@@ -83,7 +83,6 @@ jobs:
     steps:
       - name: Instalando mailutils
         run: |
-          sudo apt-get update
           sudo apt-get install -y mailutils
   
       - name: Enviando o email
